@@ -1,0 +1,15 @@
+language: java
+jdk:
+  - oraclejdk8
+dist: trusty
+addons:
+  sonarcloud:
+    organization: "315hector-github"
+    token:
+      secure: f1cf41f38d465341e6431e7bbe3e22aac6aa7058 #зашифровать sonarqube Token
+    github_token:
+      secure: 73d5bc9a3e36e702096389c77656efbe75b6218b #зашифровать github Token
+    branches:
+      - master
+script:
+  - sonar-scanner
